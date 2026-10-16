@@ -1,8 +1,10 @@
 <?php
 include 'config/koneksi.php';
-session_start();
-$nama = $_SESSION['nama'];
-$id = $_SESSION['id'];
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$nama = $_SESSION['nama'] ?? '';
+$id   = $_SESSION['id'] ?? '';
 $total_catatan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM catatan where id='$id'"))['total'];
 $total_kategori = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM kategori"))['total'];
 
