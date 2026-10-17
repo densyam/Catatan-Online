@@ -9,7 +9,7 @@ if (isset($_POST["simpan"])) {
 
     $query = mysqli_query($koneksi, "UPDATE kategori SET jenis='$jenis', keterangan='$keterangan' WHERE id='$id'");
 
-    echo "<script>alert('Perubahan kategori berhasil ditambahkan!'); window.location.href='kategori/kategori.php'</script>";
+    echo "<script>alert('Perubahan kategori berhasil ditambahkan!'); window.location.href='kategori.php'</script>";
 }
 ?>
 
