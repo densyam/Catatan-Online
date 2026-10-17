@@ -35,26 +35,18 @@ $query = mysqli_query($koneksi,"SELECT c.id, c.judul, c.isi, c.tanggal, u.nama a
             <div class="sidebar-brand-text mx-3">Kelola Catatan</div>
         </a>
         <hr class="sidebar-divider my-0">
-        <li class="nav-item active">
-            <a class="nav-link" href="dashboard.php">
-                <span>Dashboard</span>
-            </a>
-        </li>
         <li class="nav-item">
-            <a class="nav-link" href="user/kategori/kategori.php">
-                <span>Data Kategori</span>
-            </a>
+            <a class="nav-link" href="dashboard.php">Dashboard</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="user/kategori/kategori.php">Data Kategori</a>
         </li>
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link" href="auth/ganti_password.php">
-                <span>Ganti Password</span>
-            </a>
+            <a class="nav-link" href="auth/ganti_password.php">Ganti Password</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="auth/logout.php">
-                <span>Logout</span>
-            </a>
+            <a class="nav-link" href="auth/logout.php">Logout</a>
         </li>
     </ul>
     <div id="content-wrapper" class="d-flex flex-column">

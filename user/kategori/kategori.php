@@ -28,6 +28,9 @@ $query = mysqli_query($koneksi, "SELECT * FROM kategori");
         </li>
         <hr class="sidebar-divider">
         <li class="nav-item">
+            <a class="nav-link" href="../../auth/ganti_password.php">Ganti Password</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="../../auth/logout.php">Logout</a>
         </li>
     </ul>
