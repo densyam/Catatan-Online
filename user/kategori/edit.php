@@ -39,7 +39,7 @@ if (isset($_POST["simpan"])) {
                     <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?= htmlspecialchars($data['keterangan']); ?>" required>
                 </div>
                 <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-                <a href="../../kategori/kategori.php" class="btn btn-secondary">Kembali</a>
+                <a href="../../dashboard.php" class="btn btn-secondary">Kembali</a>
             </form>
         </div>
     </div>
