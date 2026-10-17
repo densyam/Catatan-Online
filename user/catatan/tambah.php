@@ -40,7 +40,7 @@ $kategori = mysqli_query($koneksi, "SELECT * FROM kategori order by jenis ASC");
                 </div>
                 <div class="mb-3">
                     <label for="id_kategori" class="form-label">Kategori</label>
-                    <select class="form-select" id="id_kategori" name="id_kategori" required>
+                    <select class="form-control" id="id_kategori" name="id_kategori" required>
                         <option value="" selected disabled>Pilih Kategori</option>
                         <?php while ($row = mysqli_fetch_assoc($kategori)) { ?>
                             <option value="<?= $row['id']; ?>"><?= $row['jenis'] ?></option>
