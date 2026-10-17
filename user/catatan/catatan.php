@@ -1,6 +1,6 @@
 <?php
 include '../../config/koneksi.php';
-$query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama as nama_user, k.jenis FROM catatan c JOIN user u on c.id_user = u.id LEFT JOIN kategori k on c.id_kategori = k.id order by c.tanggal DESC");
+$query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama as nama_user, k.jenis FROM catatan c JOIN user u on c.id_user = u.id LEFT JOIN kategori k on c.id_kategori = k.id where id_user='$id' order by c.tanggal DESC");
 ?>
 <!DOCTYPE html>
 <html lang="en">
