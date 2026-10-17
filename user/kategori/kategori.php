@@ -16,19 +16,19 @@ $query = mysqli_query($koneksi, "SELECT * FROM kategori");
 
 <div id="wrapper">
     <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../dashboard.php">
             <div class="sidebar-brand-text mx-3">Kelola Catatan</div>
         </a>
         <hr class="sidebar-divider my-0">
         <li class="nav-item">
-            <a class="nav-link" href="../dashboard.php">Dashboard</a>
+            <a class="nav-link" href="../../dashboard.php">Dashboard</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="../kategori/kategori.php">Data Kategori</a>
+            <a class="nav-link" href="../../kategori/kategori.php">Data Kategori</a>
         </li>
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link" href="../auth/logout.php">Logout</a>
+            <a class="nav-link" href="../../auth/logout.php">Logout</a>
         </li>
     </ul>
 
