@@ -11,7 +11,7 @@ if (isset($_POST["simpan"])) {
     $query = mysqli_query($koneksi, "INSERT INTO catatan (judul, isi, id_user, id_kategori, tanggal) VALUES ('$judul', '$isi', '$id_user', '$id_kategori', '$tanggal')");
     echo "<script>alert('Catatan berhasil ditambahkan!'); window.location.href='../../dashboard.php'</script>";
 }
-$kategori = mysqli_query($koneksi, "SELECT * FROM kategori order by jenis ASC");
+$kategori = mysqli_query($koneksi, "SELECT * FROM kategori WHERE id_user='$id_user' order by jenis ASC");
 ?>
 <!DOCTYPE html>
 <html lang="en">
