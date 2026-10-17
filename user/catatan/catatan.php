@@ -3,9 +3,8 @@ include '../../config/koneksi.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-$nama = $_SESSION['nama'] ?? '';
 $id   = $_SESSION['id'] ?? '';
-$query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama as nama_user, k.jenis FROM catatan c JOIN user u on c.id_user = u.id LEFT JOIN kategori k on c.id_kategori = k.id where id_user='$id' order by c.tanggal DESC");
+$query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama as nama_user, k.jenis FROM catatan c JOIN user u on c.id_user = u.id LEFT JOIN kategori k on c.id_kategori = k.id where c.id_user='$id' order by c.tanggal DESC");
 ?>
 <!DOCTYPE html>
 <html lang="en">

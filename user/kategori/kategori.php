@@ -3,7 +3,6 @@ include '../../config/koneksi.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-$nama = $_SESSION['nama'] ?? '';
 $id   = $_SESSION['id'] ?? '';
 $query = mysqli_query($koneksi, "SELECT * FROM kategori WHERE id_user='$id'");
 ?>
