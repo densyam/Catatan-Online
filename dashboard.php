@@ -5,10 +5,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 $nama = $_SESSION['nama'] ?? '';
 $id   = $_SESSION['id'] ?? '';
-$total_catatan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM catatan where id='$id'"))['total'];
-$total_kategori = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM kategori"))['total'];
+$total_catatan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM catatan WHERE id_user='$id'"))['total'];
+$total_kategori = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM kategori WHERE id_user='$id'"))['total'];
 
-$kategori_query = mysqli_query($koneksi, "SELECT k.jenis, COUNT(c.id) AS jumlah FROM kategori k LEFT JOIN catatan c ON k.id = c.id_kategori AND c.id_user='$id' GROUP BY k.id");
+$kategori_query = mysqli_query($koneksi, "SELECT k.jenis, COUNT(c.id) AS jumlah FROM kategori k LEFT JOIN catatan c ON k.id = c.id_kategori AND c.id_user='$id' WHERE k.id_user='$id' GROUP BY k.id");
 $kategori_nama = [];
 $kategori_jumlah = [];
 while ($row = mysqli_fetch_assoc($kategori_query)) {
