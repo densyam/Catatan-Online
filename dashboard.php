@@ -56,7 +56,6 @@ $query = mysqli_query($koneksi,"SELECT c.id, c.judul, c.isi, c.tanggal, u.nama a
         <div id="content" class="p-4">
             <div class="container-fluid">
                 <h1 class="h3 mb-4 text-gray-800">Selamat datang, <?= $nama; ?>.</h1>
-                                <a href="user/catatan/tambah.php" class="btn btn-primary mb-3">Tambah Catatan</a>
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Daftar Catatan</h6>

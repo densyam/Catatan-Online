@@ -46,8 +46,7 @@ $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama 
         <div id="content" class="p-4">
             <div class="container-fluid">
                 <h1 class="h3 mb-4 text-gray-800">Data Catatan</h1>
-
-
+                <a href="tambah.php" class="btn btn-primary mb-3">Tambah Catatan</a>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <thead class="thead-dark">
