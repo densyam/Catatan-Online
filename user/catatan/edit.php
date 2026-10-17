@@ -13,7 +13,7 @@ if (isset($_POST["simpan"])) {
     $query = mysqli_query($koneksi, "UPDATE catatan set judul='$judul', isi='$isi', id_kategori='$id_kategori', tanggal='$tanggal' where id='$id'");
     echo "<script>alert('Perubahan catatan berhasil disimpan!'); window.location.href='../../dashboard.php'</script>";
 }
-$kategori = mysqli_query($koneksi, "SELECT * FROM kategori order by jenis ASC");
+$kategori = mysqli_query($koneksi, "SELECT * FROM kategori WHERE id_user='$id_user' order by jenis ASC");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@ $kategori = mysqli_query($koneksi, "SELECT * FROM kategori order by jenis ASC");
                 </div>
                 <div class="mb-3">
                     <label for="id_kategori" class="form-label">Kategori</label>
-                    <select class="form-select" id="id_kategori" name="id_kategori" required>
+                    <select class="form-control" id="id_kategori" name="id_kategori" required>
                         <option value="" disabled>Pilih Kategori</option>
                         <?php while ($row = mysqli_fetch_assoc($kategori)) { ?>
                             <option value="<?= $row['id']; ?>" <?= $row['id'] == $data['id_kategori'] ? 'selected' : ''; ?>>
@@ -56,7 +56,7 @@ $kategori = mysqli_query($koneksi, "SELECT * FROM kategori order by jenis ASC");
                     <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $data['tanggal']; ?>" required>
                 </div>
                 <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-                <a href="../../dashboard.php" class="btn btn-secondary">Kembali</a>
+                <a href="catatan.php" class="btn btn-secondary">Kembali</a>
             </form>
         </div>
     </div>
