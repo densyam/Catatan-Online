@@ -1,9 +1,9 @@
 <?php
 session_start();
-include '../config/koneksi.php';
+include '../../config/koneksi.php';
 
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: ../index.php");
     exit;
 }
 

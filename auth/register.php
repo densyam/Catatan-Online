@@ -25,7 +25,7 @@ if (isset($_POST["register"])) {
     $result = mysqli_query($koneksi, $query);
 
     if ($result) {
-        echo "<script>alert('Registrasi berhasil! Silakan login.'); window.location='login.php';</script>";
+        echo "<script>alert('Registrasi berhasil! Silakan login.'); window.location='../index.php';</script>";
     } else {
         echo "<script>alert('Terjadi kesalahan saat registrasi.'); window.location='register.php';</script>";
     }
@@ -70,7 +70,7 @@ if (isset($_POST["register"])) {
                     </form>
                     <hr>
                     <div class="text-center">
-                        <a class="small" href="login.php">Sudah punya akun? Login!</a>
+                        <a class="small" href="../index.php">Sudah punya akun? Login!</a>
                     </div>
                 </div>
             </div>
