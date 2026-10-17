@@ -39,7 +39,7 @@ $query = mysqli_query($koneksi,"SELECT c.id, c.judul, c.isi, c.tanggal, u.nama a
             <a class="nav-link" href="dashboard.php">Dashboard</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../../catatan/catatan.php">Data Catatan</a>
+            <a class="nav-link" href="user/catatan/catatan.php">Data Catatan</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="user/kategori/kategori.php">Data Kategori</a>
