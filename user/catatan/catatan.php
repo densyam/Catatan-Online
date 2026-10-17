@@ -27,9 +27,12 @@ $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama 
             <a class="nav-link" href="catatan.php">Data Catatan</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../../kategori/kategori.php">Data Kategori</a>
+            <a class="nav-link" href="../kategori/kategori.php">Data Kategori</a>
         </li>
         <hr class="sidebar-divider">
+        <li class="nav-item">
+            <a class="nav-link" href="../../auth/ganti_password.php">Ganti Password</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="../../auth/logout.php">Logout</a>
         </li>
