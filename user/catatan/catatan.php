@@ -23,11 +23,11 @@ $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama 
         <li class="nav-item">
             <a class="nav-link" href="../../dashboard.php">Dashboard</a>
         </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="catatan.php">Data Catatan</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="../../kategori/kategori.php">Data Kategori</a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="../../catatan/catatan.php">Data Catatan</a>
         </li>
         <hr class="sidebar-divider">
         <li class="nav-item">

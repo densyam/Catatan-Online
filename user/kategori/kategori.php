@@ -27,7 +27,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM kategori");
             <a class="nav-link" href="../../catatan/catatan.php">Data Catatan</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="../../kategori/kategori.php">Data Kategori</a>
+            <a class="nav-link" href="kategori.php">Data Kategori</a>
         </li>
         <hr class="sidebar-divider">
         <li class="nav-item">
