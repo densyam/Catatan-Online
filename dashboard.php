@@ -35,10 +35,10 @@ $query = mysqli_query($koneksi,"SELECT c.id, c.judul, c.isi, c.tanggal, u.nama a
             <div class="sidebar-brand-text mx-3">Kelola Catatan</div>
         </a>
         <hr class="sidebar-divider my-0">
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link" href="dashboard.php">Dashboard</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="user/kategori/kategori.php">Data Kategori</a>
         </li>
         <hr class="sidebar-divider">
