@@ -6,7 +6,7 @@ if (isset($_POST["simpan"])) {
     $keterangan = $_POST["keterangan"];
 
     $query = mysqli_query($koneksi, "INSERT INTO kategori (jenis, keterangan) VALUES ('$jenis','$keterangan')");
-    echo "<script>alert('Kategori berhasil ditambahkan!'); window.location.href='../../kategori/kategori.php'</script>";
+    echo "<script>alert('Kategori berhasil ditambahkan!'); window.location.href='kategori.php'</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ if (isset($_POST["simpan"])) {
                     <input type="text" class="form-control" id="keterangan" name="keterangan" required>
                 </div>
                 <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-                <a href="../../kategori/kategori.php" class="btn btn-secondary">Kembali</a>
+                <a href="kategori.php" class="btn btn-secondary">Kembali</a>
             </form>
         </div>
     </div>

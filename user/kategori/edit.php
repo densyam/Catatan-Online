@@ -9,7 +9,7 @@ if (isset($_POST["simpan"])) {
 
     $query = mysqli_query($koneksi, "UPDATE kategori SET jenis='$jenis', keterangan='$keterangan' WHERE id='$id'");
 
-    echo "<script>alert('Perubahan kategori berhasil ditambahkan!'); window.location.href='../../kategori/kategori.php'</script>";
+    echo "<script>alert('Perubahan kategori berhasil ditambahkan!'); window.location.href='kategori/kategori.php'</script>";
 }
 ?>
 
@@ -39,7 +39,7 @@ if (isset($_POST["simpan"])) {
                     <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?= htmlspecialchars($data['keterangan']); ?>" required>
                 </div>
                 <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-                <a href="../../dashboard.php" class="btn btn-secondary">Kembali</a>
+                <a href="kategori.php" class="btn btn-secondary">Kembali</a>
             </form>
         </div>
     </div>
