@@ -1,5 +1,5 @@
 <?php
-include '../config/koneksi.php';
+include '../../config/koneksi.php';
 $query = mysqli_query($koneksi, "SELECT * FROM kategori");
 
 ?>
@@ -9,8 +9,8 @@ $query = mysqli_query($koneksi, "SELECT * FROM kategori");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Kategori</title>
-    <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../asset/css/sb-admin-2.min.css">
+    <link rel="stylesheet" href="../../asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../asset/css/sb-admin-2.min.css">
 </head>
 <body id="page-top">
 
@@ -70,7 +70,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM kategori");
     </div>
 </div>
 
-<script src="../asset/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../asset/js/sb-admin-2.min.js"></script>
+<script src="../../asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../asset/js/sb-admin-2.min.js"></script>
 </body>
 </html>
