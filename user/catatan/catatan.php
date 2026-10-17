@@ -1,5 +1,5 @@
 <?php
-include '../../config/koneksi.php';
+include '../config/koneksi.php';
 $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama as nama_user, k.jenis FROM catatan c JOIN user u on c.id_user = u.id LEFT JOIN kategori k on c.id_kategori = k.id order by c.tanggal DESC");
 ?>
 <!DOCTYPE html>
@@ -8,8 +8,8 @@ $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Catatan</title>
-    <link rel="stylesheet" href="../../asset/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../asset/css/sb-admin-2.min.css">
+    <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/sb-admin-2.min.css">
 </head>
 <body id="page-top">
 
@@ -21,7 +21,7 @@ $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama 
         </a>
         <hr class="sidebar-divider my-0">
         <li class="nav-item">
-            <a class="nav-link" href="../../dashboard.php">Dashboard</a>
+            <a class="nav-link" href="../dashboard.php">Dashboard</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../kategori/kategori.php">Data Kategori</a>
@@ -31,7 +31,7 @@ $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama 
         </li>
         <hr class="sidebar-divider">
         <li class="nav-item">
-            <a class="nav-link" href="../../auth/logout.php">Logout</a>
+            <a class="nav-link" href="../auth/logout.php">Logout</a>
         </li>
     </ul>
 
@@ -77,7 +77,7 @@ $query = mysqli_query($koneksi, "SELECT c.id, c.judul, c.isi, c.tanggal, u.nama 
         </div>
     </div>
 </div>
-<script src="../../asset/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../../asset/js/sb-admin-2.min.js"></script>
+<script src="../asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../asset/js/sb-admin-2.min.js"></script>
 </body>
 </html>

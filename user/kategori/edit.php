@@ -1,5 +1,5 @@
 <?php
-include '../../config/koneksi.php';
+include '../config/koneksi.php';
 $id = $_GET['id'];
 $query = mysqli_query($koneksi, "SELECT * FROM kategori where id='$id'");
 $data = mysqli_fetch_assoc($query);
@@ -19,8 +19,8 @@ if (isset($_POST["simpan"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Kategori</title>
-    <link rel="stylesheet" href="../../asset/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../asset/css/sb-admin-2.min.css">
+    <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/sb-admin-2.min.css">
 </head>
 <body id="page-top">
 <div class="container mt-5">
@@ -44,7 +44,7 @@ if (isset($_POST["simpan"])) {
         </div>
     </div>
 </div>
-<script src="../../asset/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../../asset/js/sb-admin-2.min.js"></script>
+<script src="../asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../asset/js/sb-admin-2.min.js"></script>
 </body>
 </html>
